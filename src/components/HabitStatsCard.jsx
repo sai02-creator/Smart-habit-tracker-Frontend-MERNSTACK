@@ -1,3 +1,4 @@
+
 import { Flame, Trophy, Target } from "lucide-react";
 
 export default function HabitStatsCard({ stat }) {
