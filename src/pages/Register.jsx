@@ -7,28 +7,57 @@ import { useTheme } from "../context/ThemeContext.jsx";
 export default function Register() {
   const { user, register } = useAuth();
   const { theme, toggle } = useTheme();
+
   const navigate = useNavigate();
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
 
-  if (user) return <Navigate to="/dashboard" replace />;
+  if (user) {
+    return <Navigate to="/dashboard" replace />;
+  }
 
-  const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+  const set = (k) => (e) =>
+    setForm({
+      ...form,
+      [k]: e.target.value,
+    });
 
   const submit = async (e) => {
     e.preventDefault();
+
     setErr("");
+
     if (form.password.length < 6) {
       setErr("Password must be at least 6 characters");
       return;
     }
+
     setLoading(true);
+
     try {
-      await register(form.name, form.email, form.password);
-      navigate("/dashboard", { replace: true });
+      await register(
+        form.name,
+        form.email,
+        form.password
+      );
+
+      navigate("/dashboard", {
+        replace: true,
+      });
+
     } catch (e) {
-      setErr(e.response?.data?.message || "Registration failed");
+      setErr(
+        e.response?.data?.error ||
+        e.response?.data?.message ||
+        "Registration failed"
+      );
     } finally {
       setLoading(false);
     }
@@ -36,15 +65,21 @@ export default function Register() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
+
       <button
         onClick={toggle}
         className="fixed top-4 right-4 p-2.5 rounded-xl glass"
         aria-label="Toggle theme"
       >
-        {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+        {theme === "dark" ? (
+          <Sun size={16} />
+        ) : (
+          <Moon size={16} />
+        )}
       </button>
 
       <div className="w-full max-w-md">
+
         <Link
           to="/"
           className="flex items-center justify-center gap-2 mb-6"
@@ -52,18 +87,32 @@ export default function Register() {
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white flex items-center justify-center shadow-lg shadow-brand-500/30">
             <Sparkles size={18} />
           </div>
-          <span className="font-semibold text-lg">AI Habit Tracker</span>
+
+          <span className="font-semibold text-lg">
+            AI Habit Tracker
+          </span>
         </Link>
 
         <div className="card p-7">
-          <h1 className="text-2xl font-semibold">Create your account</h1>
+
+          <h1 className="text-2xl font-semibold">
+            Create your account
+          </h1>
+
           <p className="text-sm text-muted mt-1">
             Free forever. Takes 30 seconds.
           </p>
 
-          <form onSubmit={submit} className="mt-6 space-y-4">
+          <form
+            onSubmit={submit}
+            className="mt-6 space-y-4"
+          >
+
             <div>
-              <label className="label">Name</label>
+              <label className="label">
+                Name
+              </label>
+
               <input
                 className="input"
                 value={form.name}
@@ -73,8 +122,12 @@ export default function Register() {
                 autoFocus
               />
             </div>
+
             <div>
-              <label className="label">Email</label>
+              <label className="label">
+                Email
+              </label>
+
               <input
                 className="input"
                 type="email"
@@ -84,8 +137,12 @@ export default function Register() {
                 required
               />
             </div>
+
             <div>
-              <label className="label">Password</label>
+              <label className="label">
+                Password
+              </label>
+
               <input
                 className="input"
                 type="password"
@@ -95,25 +152,36 @@ export default function Register() {
                 required
               />
             </div>
+
             {err && (
               <div className="text-sm text-rose-500 bg-rose-500/10 border border-rose-500/20 rounded-lg px-3 py-2">
                 {err}
               </div>
             )}
+
             <button
               type="submit"
               className="btn-primary w-full py-3"
               disabled={loading}
             >
-              {loading ? "Creating account..." : "Create account"}
+              {loading
+                ? "Creating account..."
+                : "Create account"}
             </button>
+
           </form>
 
           <div className="text-center mt-5 text-sm text-soft">
+
             Already have an account?{" "}
-            <Link to="/login" className="text-brand-600 dark:text-brand-300 font-medium">
+
+            <Link
+              to="/login"
+              className="text-brand-600 dark:text-brand-300 font-medium"
+            >
               Log in
             </Link>
+
           </div>
         </div>
       </div>
