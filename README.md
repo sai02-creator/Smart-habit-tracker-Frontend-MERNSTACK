@@ -34,9 +34,10 @@
 
 # 🌍 Live Demo
 
-## Frontend
+🌍 Live Demo
 
-## http://smart-habbit-tracker-frontend.s3-website-ap-southeast-2.amazonaws.com/
+Frontend:
+http://smart-habbit-tracker-frontend.s3-website-ap-southeast-2.amazonaws.com
 
 # 🚀 Project Overview
 
