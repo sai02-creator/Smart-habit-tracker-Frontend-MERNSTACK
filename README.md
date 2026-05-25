@@ -88,6 +88,12 @@ This project combines:
 
 ---
 
+## 🤖 AI Insights Chat
+
+<img src="./screenshots/ai-insights-chat.png" width="100%"/>
+
+---
+
 ## 🌙 Dark Mode UI
 
 <img src="./screenshots/darkmode.png" width="100%"/>
