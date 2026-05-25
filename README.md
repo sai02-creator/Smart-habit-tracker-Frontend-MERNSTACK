@@ -36,7 +36,7 @@
 
 ## Frontend
 
-https://duz479evrx9t4.cloudfront.net
+http://smart-habbit-tracker-frontend.s3-website-ap-southeast-2.amazonaws.com
 
 # 🚀 Project Overview
 
