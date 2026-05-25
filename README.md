@@ -38,6 +38,8 @@
 
 http://smart-habbit-tracker-frontend.s3-website-ap-southeast-2.amazonaws.com
 
+---
+
 # 🚀 Project Overview
 
 Smart Habit Tracker is a production-style AI-powered MERN stack application designed to help users build consistency, track habits, analyze performance, and stay motivated using intelligent AI-driven features.
@@ -59,7 +61,7 @@ This project combines:
 ```text
 Frontend (React + Vite)
         ↓
-AWS S3 + CloudFront
+AWS S3 Static Website Hosting
         ↓
 Nginx Reverse Proxy
         ↓
@@ -155,12 +157,12 @@ Google Gemini API
 ```text
 AWS EC2
 AWS S3
-AWS CloudFront
 Docker
 Nginx
 GitHub Actions CI/CD
 MongoDB Atlas
 Linux Ubuntu Server
+PM2
 ```
 
 ---
@@ -209,6 +211,17 @@ Benefits:
 - Better scalability
 - Reverse proxy architecture
 - Clean infrastructure separation
+
+---
+
+## ⚡ PM2 Process Management
+
+Configured PM2 for:
+
+- Background server execution
+- Automatic restart on crashes
+- Persistent backend uptime
+- Production process management
 
 ---
 
@@ -317,9 +330,9 @@ Successfully implemented:
 - Dockerized backend deployment
 - AWS EC2 cloud infrastructure
 - AWS S3 frontend hosting
-- CloudFront CDN delivery
 - MongoDB Atlas cloud database
 - Nginx reverse proxy
+- PM2 production process management
 - GitHub Actions automation
 - Linux production server setup
 - Responsive production UI
