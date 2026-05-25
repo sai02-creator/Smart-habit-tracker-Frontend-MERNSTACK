@@ -56,6 +56,44 @@ This project combines:
 
 ---
 
+# 📸 Application Screenshots
+
+## 🔐 Login Page
+
+<img src="./screenshots/login.png" width="100%"/>
+
+---
+
+## 📊 Dashboard
+
+<img src="./screenshots/dashboard.png" width="100%"/>
+
+---
+
+## 📈 Statistics
+
+<img src="./screenshots/statistics.png" width="100%"/>
+
+---
+
+## 🧠 AI Insights
+
+<img src="./screenshots/insights.png" width="100%"/>
+
+---
+
+## 📅 Weekly Overview
+
+<img src="./screenshots/weeklyoverview.png" width="100%"/>
+
+---
+
+## 🌙 Dark Mode UI
+
+<img src="./screenshots/darkmode.png" width="100%"/>
+
+---
+
 # 🌐 Production Architecture
 
 ```text
@@ -250,7 +288,7 @@ Restart backend automatically
 ## Clone Repository
 
 ```bash
-git clone https://github.com/sai02-creator/Smart-habit-tracker-backend-MERNSTACK.git
+git clone https://github.com/sai02-creator/Smart-habit-tracker-Frontend-MERNSTACK.git
 ```
 
 ---
@@ -268,39 +306,15 @@ npm install
 Create `.env`
 
 ```env
-PORT=3000
-
-MONGODB_URI=your_mongodb_uri
-
-JWT_SECRET=your_secret
-
-JWT_EXPIRES_IN=30d
-
-GEMINI_API_KEY=your_api_key
+VITE_API_BASE_URL=your_backend_url
 ```
 
 ---
 
-## Run Backend
+## Run Frontend
 
 ```bash
-npm start
-```
-
----
-
-# 🐳 Docker Setup
-
-## Build Docker Image
-
-```bash
-docker build -t smart-habit-backend .
-```
-
-## Run Docker Container
-
-```bash
-docker run --env-file .env -p 3000:3000 smart-habit-backend
+npm run dev
 ```
 
 ---
