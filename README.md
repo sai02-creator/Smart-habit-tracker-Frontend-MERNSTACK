@@ -34,9 +34,9 @@
 
 # 🌍 Live Demo
 
-## 🚀 Frontend Live URL
+## Frontend
 
-[Open Smart Habit Tracker](http://smart-habbit-tracker-frontend.s3-website-ap-southeast-2.amazonaws.com)
+https://duz479evrx9t4.cloudfront.net
 
 # 🚀 Project Overview
 
