@@ -36,9 +36,7 @@
 
 ## Frontend
 
-http://smart-habbit-tracker-frontend.s3-website-ap-southeast-2.amazonaws.com
-
----
+## http://smart-habbit-tracker-frontend.s3-website-ap-southeast-2.amazonaws.com/
 
 # 🚀 Project Overview
 
